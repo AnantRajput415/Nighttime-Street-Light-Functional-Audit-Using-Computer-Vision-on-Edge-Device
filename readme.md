@@ -26,6 +26,9 @@ The system is a vehicle-mounted, edge-deployed streetlight fault detector. A cam
 
 **Data** → Nighttime video is captured along pre-planned routes and extracted into frames. Each frame is labelled with bounding boxes for `ON_Streetlight` and `OFF_Streetlight` classes. A preprocessing pipeline (CLAHE, gamma correction, unsharp masking) is applied to compensate for low ambient light and motion blur before training.
 
+https://drive.google.com/drive/folders/1SJH9nexL3rW9DqcZN_Q-33obRFqGnCKH?usp=sharing
+
+
 **Model** → Multiple full-precision (FP32) baseline models are trained on a GPU workstation (Google Colab, Tesla T4): YOLOv5nu, YOLOv5su, YOLOv8n, and YOLOv8s. The best-performing lightweight model (YOLOv5nu) is selected for compression.
 
 **Compression** → Post-training quantization (ONNX Runtime dynamic INT8 and FP16), one-shot and iterative magnitude pruning (detection head excluded to preserve accuracy), and knowledge distillation (YOLOv5su → YOLOv5nu and YOLOv8s → YOLOv8n pairs) are applied to reduce model size and inference latency to levels compatible with mobile-based webapp hardware.
