@@ -1,5 +1,9 @@
 # Nighttime Street Light Functional Audit Using Computer Vision on Edge Device
 
+## 📹 Demo
+
+[![Watch the demo](https://img.shields.io/badge/▶-Watch%20Demo%20Video-blue?style=for-the-badge)](https://drive.google.com/file/d/1DqAxfWTwXV9MOyhZ1io3GhFd1Rcj6dv2/view?usp=sharing)
+
 ## 1. Problem Statement, Motivation & Objectives (1–2 paragraphs + 3–5 bullets)
 Urban street lighting is a critical component of public infrastructure it improves visibility, reduces crime, and supports safe vehicular and pedestrian movement after dark. Yet maintaining expansive street lighting networks at city scale remains a formidable challenge. Cities worldwide operate hundreds of thousands of streetlights (Los Angeles alone maintains over 220,000 units), and globally the number is projected to exceed 350 million. Despite their importance, most cities still rely on outdated maintenance practices: periodic manual inspections and citizen complaint-driven reporting. These approaches are labor-intensive, error-prone, and slow to detect outages, leaving malfunctioning lamps unnoticed for extended periods and compromising both public safety and energy efficiency.
 
@@ -21,6 +25,8 @@ Kumar et al. (2016) demonstrated the feasibility of this paradigm using a car-to
 ## 2. Proposed Solution (Overview)
 
 The system is a vehicle-mounted, edge-deployed streetlight fault detector. A camera captures nighttime video during drive-by patrols; the webapp runs a compressed YOLO model to classify each detected lamp as ON or OFF in real time, logging faults with timestamps for subsequent municipal review — with no cloud connectivity required.
+
+<img width="4164" height="2322" alt="flow_chart" src="https://github.com/user-attachments/assets/5c307ea4-5dbe-427c-a926-a274de52a81a" />
 
 **End-to-end pipeline:**
 
@@ -270,6 +276,8 @@ A larger teacher model supervises a smaller student model via a weighted loss co
 - Quantization (ORT dynamic INT8 and FP16), pruning (one-shot Magnitude)
 
 - RPi 4 inference speed is measured via real ORT CPU benchmarks (4 threads pinned) rather than a formula estimate, giving realistic deployable performance figures
+
+
 
 **Limitations:**
 
