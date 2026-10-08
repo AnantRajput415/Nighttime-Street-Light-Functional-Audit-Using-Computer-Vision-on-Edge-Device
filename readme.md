@@ -331,3 +331,9 @@ A larger teacher model supervises a smaller student model via a weighted loss co
 10. Buslaev, A. et al. (2020). *Albumentations: Fast and Flexible Image Augmentations.* Information, 11(2), 125.
 
 11. OpenStreetMap contributors. (2024). *Bengaluru road network data.* https://www.openstreetmap.org
+
+Team:
+Vuyyuru Gopi chand
+Aanat Rajput
+Karthikeya Gaur
+Revathy Ramesh
